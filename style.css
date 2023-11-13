@@ -2018,7 +2018,7 @@ Mini Cart
     opacity: 1;
 }
 
-.mini-cart .products img {
+:is(.mini-cart .products, .products.cart) .thumbnail img {
     transform: none;
 }
 
@@ -2049,7 +2049,7 @@ Mini Cart
     overflow: auto;
 }
 
-.mini-cart .thumbnail {
+:where(.mini-cart, .products.cart) .thumbnail {
     position: relative;
     width: 80px;
     height: 80px;
@@ -2087,6 +2087,16 @@ Mini Cart
     width: var(--percent100);
     text-align: center;
     margin-bottom: 1em;
+}
+
+.mini-cart.show {
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    max-width: 400px;
+    width: 90%;
 }
 
 
@@ -2428,7 +2438,12 @@ Mini Cart
     .single-category .products.main .item {
         flex: 0 0 33.3333%;
     }
-    
+
+
+    /* page cart */
+    .products.cart .form-cart {
+        
+    }
 
 
 }
