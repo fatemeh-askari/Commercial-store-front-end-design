@@ -2026,7 +2026,7 @@ Mini Cart
     opacity: 1;
 }
 
-:is(.mini-cart .products, .products.cart) .thumbnail img {
+:is(.mini-cart .products, .products.cart, .checkout .products) .thumbnail img {
     transform: none;
 }
 
@@ -2057,7 +2057,7 @@ Mini Cart
     overflow: auto;
 }
 
-:where(.mini-cart, .products.cart) .thumbnail {
+:where(.mini-cart, .products.cart, .checkout) .thumbnail {
     position: relative;
     width: 80px;
     height: 80px;
@@ -2364,7 +2364,44 @@ Page Checkout
 
 .summary-totals ul {
     max-width: 335px;
+    line-height: 2;
+    margin-bottom: 3em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--secondary-dark-color);
 }
+
+.summary-totals li {
+    display: flex;
+    justify-content: space-between;
+    font-weight: var(--fw5);
+}
+
+.summary-totals li strong {
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+.summary-totals li:last-child {
+    margin-top: 2em;
+}
+
+.summary-totals li:not(:last-child) span:first-child {
+    color: var(--light-text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
